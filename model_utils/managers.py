@@ -311,6 +311,7 @@ class SoftDeletableManagerMixin(object):
     Manager that limits the queryset by default to show only not removed
     instances of model.
     """
+    use_in_migrations = True
     _queryset_class = SoftDeletableQuerySet
 
     def get_queryset(self):
